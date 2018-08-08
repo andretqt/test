@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css" <script src="https://code.jquery.com/jquery.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angularjs-gauge/dist/angularjs-gauge.min.js"></script>
+    <script type="text/javascript">angular.module('myapp', ['angularjs-gauge']);</script>
+
+</head>
+
+<body>
+    <div class='wrap'>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">VentureX: prototype</a>
+            <div class="nav navbar-nav ml-auto">
+                <div id="welcome">
+                    Hello, 16@test.com
+                </div>
+                <button type="button" class="btn btn-light">Log Out</button>
+            </div>
+
+        </nav>
+        <div class='profile'>
+            <div id="image">
+               
+            </div>
+            <div id="profile-info">
+                <div class="row" id="row-a">
+                    <div class="w-25">Market</div>
+                    <div class="middle">Fill in who are your customers?</div>
+                    <div class="w-25"></div>
+                </div>
+                <div class="row" id="row-b">
+                    <div class="w-25">Pain</div>
+                    <div class="middle">What is the pain statement you are trying to solve for them?</div>
+                    <div class="w-25"></div>
+                </div>
+                <div class="row" id="row-c">
+                    <div class="w-25">Benefit</div>
+                    <div class="middle">What is the benefit that will match the pain statement?</div>
+                    <div class="w-25">
+                        <button class="btn btn-light" id="edit">Edit Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dashboard">
+            <div id="dashboard-text">
+                <div id="text1">How is <strong>VentureX</strong> <span class="glyphicon">&#x270f;</span> doing today?&nbsp;</div>
+                <div id="text2">Check dashboard</div>
+            </div>
+            <div id="gauges">
+                <ng-gauge size="150" type="full" thick="5" 
+                    min="0" max="100" value="27" 
+                    cap="round" label="Product" append=" %"
+                    foreground-color="#FFA500" background-color="#EEE">
+                </ng-gauge>
+                <ng-gauge size="150" type="full" thick="5" 
+                min="0" max="24" value="3" 
+                cap="round" label="Runway" append=" Months"
+                foreground-color="#FF0000" background-color="#EEE">
+                </ng-gauge>
+                <ng-gauge size="150" type="full" thick="5" 
+                min="0" max="100" value="24" 
+                cap="round" label="Conversion" append=" %"
+                foreground-color="#FFA500" background-color="#EEE">
+                </ng-gauge>
+                <ng-gauge size="150" type="full" thick="5" 
+                min="0" max="100" value="100" 
+                cap="round" label="Engagement" append=" %"
+                foreground-color="#008000" background-color="#EEE">
+                </ng-gauge>
+            </div>
+        </div>
+        <div class="alert alert-warning" role="alert">
+            Small conversion? Learn what you can do to rise your conversion
+        </div>
+        <div class="alert alert-danger" role="alert">
+            Low product score? Try this to get more ...
+        </div>
+    </div>
+</body>
+
+
+</html>
+
+
